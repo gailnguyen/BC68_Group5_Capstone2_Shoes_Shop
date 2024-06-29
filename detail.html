@@ -28,8 +28,57 @@
 </head>
 
 <body>
+    <!-- header -->
+    <header></header>
+    <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="#">Main</a>
+        <a class="breadcrumb-item" href="#">Sub</a>
+        <span class="breadcrumb-item active" aria-current="page">Active</span>
+    </nav>
 
-    <h1>DETAILS</h1>
+    <!-- main -->
+    <section>
+
+
+
+        <div class="container">
+            <!-- input id -->
+
+            <form action="" id="search">
+                <div class="mb-3">
+                    <label for="" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="" id="id" aria-describedby="helpId"
+                        placeholder="submit ID" />
+                    <button type="submit" class="btn btn-dark text-white mt-3">See details</button>
+                </div>
+
+            </form>
+
+            <!-- single product -->
+            <div class="row single-product-area">
+                <div class="col-4">
+                    <!-- product img -->
+                    <img src="" alt="">
+                </div>
+                <div class="col-8">
+                    <!-- product detail -->
+                    <div class="product-card">
+                        <!-- info -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- categories -->
+            <div class="row same-categories">
+                <div class="d-grid">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer></footer>
 
 
 
@@ -41,7 +90,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-    <script src="./js/home.js"></script>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
+        integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- my js -->
+    <script src="./js/detail.js"></script>
 </body>
 
 </html>
