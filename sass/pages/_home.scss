@@ -1,0 +1,315 @@
+// REUSED
+.container {
+  padding-inline: 15px;
+  width: 100%;
+}
+
+.spacing {
+  padding-block: $section-spacing;
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  color: $title-color;
+}
+
+.h1 {
+  font-size: $fz-1;
+  font-weight: $fw-300;
+  line-height: 1.5;
+}
+
+.h2 {
+  font-size: $fz-2;
+}
+
+.h3 {
+  font-size: $fz-4;
+}
+
+.h4 {
+  font-size: $fz-5;
+  text-transform: uppercase;
+}
+
+.btn {
+  background: $primary;
+  color: $white;
+  font-size: $fz-5;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 14px 25px;
+  border: 1px solid $primary;
+  transition: $transition-1;
+}
+
+.btn-primary:is(:hover, :focus) {
+  background: $primary-opacity;
+  border-color: $primary-opacity;
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: $black;
+  color: $black;
+}
+
+.btn-secondary:is(:hover, :focus) {
+  background: hsla(0, 0%, 0%, 0.1);
+  border-color: $black;
+  color: $black;
+}
+
+.scrollbar {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+
+  li {
+    min-width: 100%;
+    scroll-snap-align: start;
+  }
+
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $white;
+    border-radius: 20px;
+    outline: 2px solid $primary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+    border: 2px solid $white;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-button {
+    width: calc(25% - 40px);
+  }
+}
+
+// Card
+
+.card-banner {
+  background: $border-color;
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: $transition-2;
+}
+
+.card-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: $primary;
+  color: $white;
+  padding: 5px 15px;
+  font-family: $ff-roboto;
+  font-size: $fz-7;
+  border-radius: 25px;
+}
+
+.card-action-list {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  opacity: 0;
+  transition: $transition-1;
+}
+
+.card-action-item {
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.card-tooltip {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translateY(-50%);
+  width: max-content;
+  background: $black;
+  color: $white;
+  font-family: $ff-roboto;
+  font-size: $fz-7;
+  padding: 4px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: $transition-1;
+}
+
+.card-action-btn {
+  background: $white;
+  color: $title-color;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 50%;
+  transition: $transition-1;
+
+  ion-icon {
+    --ionicon-stroke-width: 30px;
+  }
+
+  &:is(:hover, :focus) {
+    background: $primary;
+    color: $white;
+
+    & + .card-tooltip {
+      opacity: 1;
+    }
+  }
+}
+
+.product-card:is(:hover, :focus) {
+  .card-img {
+    transform: scale(1.1);
+  }
+
+  .card-action-list {
+    right: 20px;
+    opacity: 1;
+  }
+}
+
+.card-content {
+  padding: 24px 15px 0;
+  text-align: center;
+}
+
+.card-text {
+  font-family: $ff-roboto;
+  color: $text-color;
+  font-size: $fz-7;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.product-card {
+  .card-title {
+    margin-bottom: 8px;
+
+    a {
+      color: inherit;
+      transition: $transition-1;
+      text-transform: capitalize;
+      padding-block: 4px;
+
+      &:is(:hover, :focus) {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.card-price {
+  color: $primary;
+  font-family: $ff-roboto;
+  font-weight: $fw-600;
+}
+
+/*
+* BANNER
+*/
+.banner {
+  background-image: url("./../images/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  min-height: 400px;
+  @include flex(flex-start, center);
+
+  &-title {
+    margin-bottom: 10px;
+
+    strong {
+      display: block;
+    }
+  }
+
+  &-text {
+    font-family: $ff-roboto;
+    color: $text-color;
+    font-size: $fz-8;
+    line-height: 1.8;
+    max-width: 46ch;
+    margin-bottom: 25px;
+  }
+}
+
+/*
+* COLLECTION
+*/
+
+.collection {
+  &-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    @include flex(space-between, center);
+    flex-direction: column;
+    padding-block: 45px 25px;
+  }
+}
+
+/*
+* PRODUCT
+*/
+
+.product {
+  .section-title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .filter-list {
+    @include flex(center, center);
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .filter-btn {
+    color: $text-color;
+    padding: 10px 16px;
+    font-family: $ff-roboto;
+    font-weight: $fw-500;
+    border: 1px solid $line-color;
+    border-radius: 30px;
+
+    &.active {
+      background: $primary;
+      color: $white;
+      border-color: $primary;
+    }
+  }
+
+  .product-list {
+    display: grid;
+    gap: 50px 25px;
+  }
+}

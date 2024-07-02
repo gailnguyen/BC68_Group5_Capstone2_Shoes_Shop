@@ -4,6 +4,9 @@
 // Base
 @import "./base/base";
 // Layouts
+@import "./layouts/header";
+@import "./layouts/footer";
+// Pages
 @import "./pages/home";
 @import "./pages/detail";
 @import "./pages/register";
