@@ -1,6 +1,9 @@
-@import "./base/base";
-@import "./helpers/minxin";
+// Helpers
 @import "./helpers/variable";
+@import "./helpers/minxin";
+// Base
+@import "./base/base";
+// Layouts
 @import "./pages/home";
 @import "./pages/detail";
 @import "./pages/register";

@@ -1,14 +1,57 @@
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
 }
 
 a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
+a,
+img,
+span,
+table,
+tbody,
+button,
+ion-icon {
+  display: block;
+}
+
+button,
+input {
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.8;
+}
+
+html {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(0, 0%, 100%);
+  font-size: 1.6rem;
+  padding-block-start: 90px;
 }/*# sourceMappingURL=style.css.map */
