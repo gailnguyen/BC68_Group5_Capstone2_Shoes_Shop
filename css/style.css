@@ -913,7 +913,7 @@ body {
     max-width: 970px;
   }
   .scrollbar > li {
-    min-width: calc(33.33% - 12.5px);
+    min-width: calc(33.33% - 16.66px);
   }
   #header .nav-open-btn,
   #header .nav-close-btn,
