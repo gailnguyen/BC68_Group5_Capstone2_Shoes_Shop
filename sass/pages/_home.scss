@@ -57,6 +57,24 @@
   color: $black;
 }
 
+.btn-link {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-inline: auto;
+  max-width: max-content;
+  font-family: $ff-roboto;
+  font-size: $fz-6;
+  font-weight: $fw-500;
+  padding-bottom: 6px;
+  border-bottom: 1px solid $white;
+
+  &:is(:hover, :focus) {
+    border-color: transparent;
+  }
+}
+
 .btn-secondary:is(:hover, :focus) {
   background: hsla(0, 0%, 0%, 0.1);
   border-color: $black;
@@ -311,5 +329,181 @@
   .product-list {
     display: grid;
     gap: 50px 25px;
+  }
+}
+
+/*
+* CTA
+*/
+
+.cta {
+  &-list {
+    display: grid;
+    gap: 40px;
+  }
+
+  &-card--1 {
+    background-image: url("./../images/cta-1.jpg");
+  }
+
+  &-card--2 {
+    background-image: url("./../images/cta-2.jpg");
+  }
+
+  &-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    text-align: center;
+    padding: 50px 20px;
+
+    .card-subtitle {
+      font-size: $fz-5;
+      margin-bottom: 15px;
+    }
+
+    .card-title {
+      color: inherit;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/*
+* SPECIAL
+*/
+
+.special {
+  &-banner {
+    height: 500px;
+    background-image: url("./../images/special-banner.jpg");
+    background-color: rgb(7, 6, 1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .banner-title {
+    color: $white;
+    font-weight: $fw-600;
+  }
+
+  .section-title {
+    margin-block: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .text {
+      min-width: max-content;
+    }
+
+    .line {
+      width: 100%;
+      height: 1px;
+      background: hsl(0, 0%, 88%);
+    }
+  }
+}
+
+/*
+* SERVICE
+*/
+
+.service {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-inline: 30px;
+  }
+
+  &-item {
+    width: 220px;
+  }
+
+  &-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .card-icon {
+      background: $primary;
+      min-width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      filter: brightness(0) invert(1);
+      width: 60%;
+      height: auto;
+    }
+
+    .card-title {
+      font-size: $fz-6;
+      margin-bottom: 8px;
+    }
+
+    .card-text {
+      color: $text-color;
+      font-family: $ff-roboto;
+      font-size: $fz-7;
+
+      span {
+        display: inline-block;
+        color: $primary;
+      }
+    }
+  }
+}
+
+/*
+* POST
+*/
+
+.post {
+  &-list {
+    gap: 0;
+  }
+
+  .scrollbar &-item {
+    min-width: 33.33%;
+  }
+
+  &-item {
+    position: relative;
+    aspect-ratio: 1/1;
+  }
+
+  &-link {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(230, 41%, 14%, 0.6);
+    opacity: 0;
+    transition: $transition-1;
+
+    ion-icon {
+      color: $white;
+      font-size: 40px;
+    }
+
+    &:is(:hover, :focus) {
+      opacity: 1;
+    }
   }
 }

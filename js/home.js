@@ -2,12 +2,42 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-// Sử dụng IIFE, Closure, Context
+// XỬ LÍ EVENT CLICK NAV TRÊN MOBILE
+const overlay = $("[data-overlay]");
+const openBtn = $("[data-nav-open-btn]");
+const closeBtn = $("[data-nav-close-btn]");
+const navbar = $("[data-navbar]");
+
+function addEvent(eventype, elements, func) {
+  for (let element of elements) {
+    element.addEventListener(eventype, func);
+  }
+}
+
+function toggleClass() {
+  overlay.classList.toggle("active");
+  navbar.classList.toggle("active");
+}
+
+addEvent("click", [openBtn, overlay, closeBtn], toggleClass);
+
+// XỬ LÍ THÊM CLASS ACTIVE CHO HEADER VÀ GO TO TOP KHI SCROLL
+const header = $("[data-header]");
+const goTopBtn = $("[data-go-top]");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 80) {
+    header.classList.add("active");
+    goTopBtn.classList.add("active");
+  } else {
+    header.classList.remove("active");
+    goTopBtn.classList.remove("active");
+  }
+});
+
+// XỬ LÍ GỌI API VÀ RENDER SẢN PHẨM
+// Dùng IIFE, closure, context
 const apps = (() => {
-  const overlay = $("[data-overlay]");
-  const openBtn = $("[data-nav-open-btn]");
-  const closeBtn = $("[data-nav-close-btn]");
-  const navbar = $("[data-navbar]");
   const api = "https://shop.cyberlearn.vn/api/Product";
 
   // Hàm gọi Api
@@ -27,19 +57,8 @@ const apps = (() => {
   }
 
   return {
-    addEvent(eventype, elements, func) {
-      for (let element of elements) {
-        element.addEventListener(eventype, func);
-      }
-    },
-
-    toggleClass() {
-      overlay.classList.toggle("active");
-      navbar.classList.toggle("active");
-    },
-
     // Hàm render ra html
-    render(list) {
+    render(list, element, text) {
       let html = list
         .map((shoe) => {
           let desc = shoe.shortDescription.split(":");
@@ -57,7 +76,7 @@ const apps = (() => {
                   loading="lazy"
                 />
         
-                <div class="card-badge">New</div>
+                <div class="card-badge">${text}</div>
         
                 <ul class="card-action-list">
                   <li class="card-action-item">
@@ -123,18 +142,24 @@ const apps = (() => {
         })
         .join("");
 
-      $("[data-product]").innerHTML = html;
+      element.innerHTML = html;
     },
 
     async init() {
-      // Xử lí event click nav trên mobile
-      this.addEvent("click", [openBtn, overlay, closeBtn], this.toggleClass);
-
       // Gọi Api và render ra html
       let data = await getApi();
+
+      // Nếu tồn tại data, thì lấy data và gọi hàm render để render ra html.
       if (data) {
         let listShoes = data.slice(0, 8);
-        this.render(listShoes);
+
+        let listSpecial = listShoes.filter((item) => {
+          return item.price >= 280;
+        });
+
+        // Gọi hàm render
+        this.render(listShoes, $("[data-product]"), "new");
+        this.render(listSpecial, $("[data-special-product]"), "special");
       } else {
         alert("Lấy dữ liệu thất bại, vui lòng F5 lại trang");
       }
