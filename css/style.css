@@ -14,62 +14,6 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
-
-.container {
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-}
-.container h2 {
-  text-align: center;
-}
-.container .form-group {
-  margin-bottom: 15px;
-}
-.container .form-group label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-.container .form-group .required {
-  color: red;
-}
-.container .form-group input {
-  padding: 8px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.container .form-group .form-check {
-  margin-bottom: 10px;
-}
-.container .form-group .form-check .form-check-input {
-  margin-right: 5px;
-}
-.container p {
-  margin: 15px 0;
-  font-size: 14px;
-}
-.container button {
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  width: 100%;
-}
-.container button:hover {
-  background-color: #0056b3;
 a,
 img,
 span,
@@ -733,6 +677,60 @@ body {
   opacity: 1;
 }
 
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.container h2 {
+  text-align: center;
+}
+.container .form-group {
+  margin-bottom: 15px;
+}
+.container .form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.container .form-group .required {
+  color: red;
+}
+.container .form-group input {
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.container .form-group .form-check {
+  margin-bottom: 10px;
+}
+.container .form-group .form-check .form-check-input {
+  margin-right: 5px;
+}
+.container p {
+  margin: 15px 0;
+  font-size: 14px;
+}
+.container button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+.container button:hover {
+  background-color: #0056b3;
+}
+
 /*
 * FOOTER
 */
@@ -877,7 +875,7 @@ body {
 }
 
 /*
-* RESPONSIVE
+* RESPONSIVE FOR HOMEPAGE
 */
 @media screen and (min-width: 575px) {
   .container {
@@ -1103,6 +1101,4 @@ body {
     grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
     gap: 50px;
   }
-}
-
-/* # sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
