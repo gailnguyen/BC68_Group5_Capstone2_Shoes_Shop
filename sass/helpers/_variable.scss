@@ -1,0 +1,36 @@
+// Color
+$primary: hsl(5, 100%, 69%);
+$primary-opacity: hsl(5, 100%, 73%);
+$black: hsl(0, 0%, 0%);
+$title-color: hsl(217, 28%, 9%);
+$text-color: hsl(0, 0%, 27%);
+$white: hsl(0, 0%, 100%);
+$border-color: hsl(200, 12%, 95%);
+$line-color: hsl(0, 0%, 88%);
+
+// Typography
+$ff-roboto: "Roboto", sans-serif;
+$ff-josefin: "Josefin Sans", sans-serif;
+
+$fz-1: 3rem;
+$fz-2: 2.6rem;
+$fz-3: 2.2rem;
+$fz-4: 2rem;
+$fz-5: 1.8rem;
+$fz-6: 1.6rem;
+$fz-7: 1.4rem;
+$fz-8: 1.2rem;
+
+$fw-300: 300;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+
+// Transition
+$transition-1: 0.25s ease;
+$transition-2: 0.5s ease;
+$cubic-out: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+$cubic-in: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+
+// spacing
+$section-spacing: 60px;
