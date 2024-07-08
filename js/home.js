@@ -74,6 +74,7 @@ const apps = (() => {
                   width="312"
                   height="350"
                   loading="lazy"
+                  id=${shoe.id} onclick="handleItemClick(event)"
                 />
         
                 <div class="card-badge">${text}</div>
@@ -132,7 +133,7 @@ const apps = (() => {
         
               <div class="card-content">
                 <h3 class="card-title h3">
-                  <a href="./detail.html">${shoe.name}</a>
+                  <a href="#">${shoe.name}</a>
                 </h3>
                 <p class="card-text">${desc[1]}</p>
                 <data class="card-price" value=" ${shoe.price}">$${shoe.price}</data>
@@ -168,3 +169,10 @@ const apps = (() => {
 })();
 
 apps.init();
+
+// lấy id sản phẩm từ event onclick
+function handleItemClick(event) {
+  const itemId = event.target.id;
+  console.log(itemId);
+  window.location.href = `detail.html?id=${itemId}`;
+}

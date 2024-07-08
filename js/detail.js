@@ -1,7 +1,12 @@
-function getById(event) {
-  event.preventDefault();
-  //   console.log("haha");
-  let id = document.getElementById("id").value;
+function getIdParams() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    id: params.get("id"),
+  };
+}
+
+function getById() {
+  let id = getIdParams().id;
   let promise = axios({
     method: "GET",
     url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
@@ -15,7 +20,7 @@ function getById(event) {
       console.log(err);
     });
 }
-document.getElementById("search").onsubmit = getById;
+getById();
 
 function renderDetailApi(object) {
   let {
