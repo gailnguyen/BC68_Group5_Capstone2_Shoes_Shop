@@ -1,0 +1,24 @@
+@mixin styleText($color, $fs, $fw, $text-transform) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+  text-transform: $text-transform;
+  margin: 10px 0;
+  line-height: 1.8;
+}
+
+@mixin styleButton($color-before, $color-after, $bg-before, $bg-after) {
+  padding: 10px 35px;
+  border: 1px solid $orange;
+  border-radius: 10px;
+  color: $color-before;
+  background-color: $bg-before;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  // parent selector &
+  &:hover {
+    background-color: $bg-after;
+    color: $color-after;
+  }
+}

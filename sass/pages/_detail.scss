@@ -1,0 +1,153 @@
+.single-product-area {
+  align-items: center;
+  margin-bottom: 10px;
+  .single-product-img {
+    background-color: $grey-light;
+    img {
+      width: 100%;
+    }
+  }
+
+  .single-product-card {
+    h2 {
+      @include styleText($title-color, $fz-2, $fw-800, $uppercase);
+    }
+
+    h3 {
+      @include styleText($orange, $fz-6, $fw-500, $uppercase);
+    }
+
+    p {
+      @include styleText($text-color, $fz-9, $fw-300, $capitalize);
+    }
+
+    span {
+      color: $primary-opacity;
+    }
+
+    .product_size {
+      margin: 30px 0;
+      span {
+        @include styleText($text-color, $fz-9, $fw-500, $uppercase);
+        padding: 10px 30px;
+        margin-right: 10px;
+        border: 1px solid $text-color;
+        border-radius: 10px;
+
+        &:hover {
+          color: $white;
+          background-color: $orange;
+          border: 1px solid $orange;
+          transition: all 0.5s;
+        }
+      }
+    }
+
+    #btnAddToCart {
+      @include styleButton($white, $white, $orange, $primary-opacity);
+      margin-right: 10px;
+    }
+
+    #btnAddToFavorites {
+      @include styleButton($orange, $white, $white, $primary-opacity);
+    }
+  }
+}
+
+.product-description {
+  .nav-tabs {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: $grey-light;
+    border: none;
+
+    .nav-item {
+      button {
+        @include styleText($title-color, $fz-9, $fw-600, $uppercase);
+        // background-color: $grey-light;
+        opacity: 0.8;
+        padding: 10px 20px;
+        margin: 0;
+        text-align: center;
+        background-color: $grey-light;
+        border: none;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .tab-pane {
+    .form-label,
+    .control-label {
+      span {
+        color: $orange;
+      }
+    }
+
+    padding: 30px 0;
+
+    p {
+      @include styleText($text-color, $fz-9, $fw-300, $capitalize);
+      margin: 0;
+    }
+  }
+}
+
+.same-categories {
+  h2 {
+    position: relative;
+    @include styleText($text-color, $fz-5, $fw-500, $capitalize);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 250px;
+      right: 0;
+      height: 2px;
+      background-color: $grey-light;
+      transform: translateY(-50%);
+    }
+  }
+
+  .col-4 {
+    padding: 0;
+    .related-product-card {
+      .product-layout {
+        padding: 20px;
+        border-radius: 8px;
+        border: 1.5px solid $white;
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+          border: 1px solid $orange;
+          transition: all 0.3s;
+        }
+
+        .related-product-img {
+          background-color: $grey-light;
+        }
+
+        .related-product-info {
+          p {
+            @include styleText($title-color, $fz-8, $fw-600, $uppercase);
+          }
+          h3 {
+            @include styleText($title-color, $fz-8, $fw-600, $uppercase);
+            &:hover {
+              color: $orange;
+            }
+          }
+          span {
+            color: $primary-opacity;
+          }
+        }
+      }
+    }
+  }
+}
