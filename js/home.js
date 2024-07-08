@@ -133,7 +133,7 @@ const apps = (() => {
         
               <div class="card-content">
                 <h3 class="card-title h3">
-                  <a href="#">${shoe.name}</a>
+                  <a href="./detail.html">${shoe.name}</a>
                 </h3>
                 <p class="card-text">${desc[1]}</p>
                 <data class="card-price" value=" ${shoe.price}">$${shoe.price}</data>
