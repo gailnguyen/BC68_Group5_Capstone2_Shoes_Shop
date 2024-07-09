@@ -43,11 +43,11 @@ function renderDetailApi(object) {
     sizeOption += `<span>${size[i]}</span>`;
   }
   content += `
-    <div class="col-5 single-product-img">
+    <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 single-product-img">
         <!-- product img -->
         <img src="${image}" class="img-fluid" alt="">
     </div>
-    <div class="col-7">
+    <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
         <!-- product detail -->
         <div class="single-product-card p-5">
             <h2>${name}</h2>
@@ -57,8 +57,8 @@ function renderDetailApi(object) {
             <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>
             <div class="product_size"><p>Size:</p>${sizeOption}</div>
             <p>Quantity: ${quantity}</p>
-            <button id="btnAddToCart">ADD TO CART</button>
-            <button id="btnAddToFavorites">ADD TO FAVORITES</button>
+            <button class="d-inline" id="btnAddToCart">ADD TO CART</button>
+            <button class="d-inline" id="btnAddToFavorites">ADD TO FAVORITES</button>
         </div>
     </div>
     `;
@@ -67,7 +67,7 @@ function renderDetailApi(object) {
 
   // full description
   document.querySelector(".product-description").innerHTML = `
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <ul class="nav nav-tabs flex-sm-column flex-md-column flex-lg-row flex-xl-row" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
       type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">description</button>
@@ -125,7 +125,7 @@ function renderDetailApi(object) {
     let { image, name, description, price } = relatedProducts[z];
     // console.log(alias);
     sameCategory += `
-    <div class="col-4">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
       <div class="related-product-card">
         <div class="product-layout">
           
