@@ -1,3 +1,18 @@
+// XỬ LÍ THÊM CLASS ACTIVE CHO HEADER VÀ GO TO TOP KHI SCROLL
+// XỬ LÍ THÊM CLASS ACTIVE CHO HEADER VÀ GO TO TOP KHI SCROLL
+const $header = $("[data-header]");
+const $goTopBtn = $("[data-go-top]");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 80) {
+    $header.addClass("active");
+    $goTopBtn.addClass("active");
+  } else {
+    $header.removeClass("active");
+    $goTopBtn.removeClass("active");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("registerForm")
