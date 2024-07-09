@@ -1,595 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Footcap</title>
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <title>Footcap</title>
-  <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-    rel="stylesheet" />
+    <!-- my css -->
+    <link rel="stylesheet" href="./css/indexHome.css" />
+  </head>
 
-  <!-- my css -->
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
-
-<body id="go-top">
-  <!-- HEADER -->
-  <header id="header" data-header>
-    <div class="container">
-      <div class="overlay" data-overlay></div>
-      <a href="./index.html" class="logo">
-        <img src="./images/logo.svg" alt="logo" width="160" height="50" />
-      </a>
-
-      <!-- Icon click to navbar mobile -->
-      <button class="nav-open-btn" data-nav-open-btn>
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-
-      <!-- Navbar -->
-      <nav class="nav" data-navbar>
-        <button class="nav-close-btn" data-nav-close-btn>
-          <ion-icon name="close-outline"></ion-icon>
-        </button>
-
-        <a href="#" class="logo">
-          <img src="./images/logo.svg" width="190" height="50" alt="Logo" />
+  <body id="go-top">
+    <!-- HEADER -->
+    <header id="header" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+        <a href="./index.html" class="logo">
+          <img src="./images/logo.svg" alt="logo" width="160" height="50" />
         </a>
 
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Products</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Contact</a>
-          </li>
-        </ul>
+        <!-- Icon click to navbar mobile -->
+        <button class="nav-open-btn" data-nav-open-btn>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
 
-        <ul class="nav-actions-list">
-          <li>
-            <button class="action-btn">
-              <ion-icon name="search-outline"></ion-icon>
-              <span class="action-text"></span>
-            </button>
-          </li>
+        <!-- Navbar -->
+        <nav class="nav" data-navbar>
+          <button class="nav-close-btn" data-nav-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
 
-          <li>
-            <a href="./register.html" class="action-btn">
-              <ion-icon name="person-outline"></ion-icon>
-              <span class="action-text">Login / Register</span>
+          <a href="#" class="logo">
+            <img src="./images/logo.svg" width="190" height="50" alt="Logo" />
+          </a>
+
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Products</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+
+          <ul class="nav-actions-list">
+            <li>
+              <button class="action-btn">
+                <ion-icon name="search-outline"></ion-icon>
+                <span class="action-text"></span>
+              </button>
+            </li>
+
+            <li>
+              <a href="./register.html" class="action-btn">
+                <ion-icon name="person-outline"></ion-icon>
+                <span class="action-text">Login / Register</span>
+              </a>
+            </li>
+
+            <li>
+              <button class="action-btn">
+                <ion-icon name="heart-outline"></ion-icon>
+                <span class="action-text">Wishlist</span>
+                <data class="action-count" value="5">5</data>
+              </button>
+            </li>
+
+            <li>
+              <button class="action-btn">
+                <ion-icon name="bag-outline"></ion-icon>
+                <span class="action-text">
+                  Basket: <strong>$318.00</strong>
+                </span>
+                <data class="action-count" value="4"> 4 </data>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- BANNER -->
+      <section class="spacing banner">
+        <div class="container">
+          <h2 class="h1 banner-title">
+            New Summer <strong>Shoes Collection</strong>
+          </h2>
+
+          <p class="banner-text">
+            Competently expedite alternative benefits whereas leading-edge
+            catalysts for change. Globally leverage existing an expanded array
+            of leadership.
+          </p>
+
+          <button class="btn btn-primary">
+            <span>Shop now</span>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
+        </div>
+      </section>
+
+      <!-- COLLECTIONS -->
+      <section class="spacing collection">
+        <div class="container">
+          <ul class="collection-list scrollbar">
+            <li>
+              <div
+                class="collection-card"
+                style="background-image: url('./images/collection-1.jpg')"
+              >
+                <h3 class="h4 card-title">Men Collections</h3>
+
+                <a href="#" class="btn btn-secondary">
+                  <span>Explore All </span>
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div
+                class="collection-card"
+                style="background-image: url('./images/collection-2.jpg')"
+              >
+                <h3 class="h4 card-title">Women Collections</h3>
+
+                <a href="#" class="btn btn-secondary">
+                  <span>Explore All</span>
+
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div
+                class="collection-card"
+                style="background-image: url('./images/collection-3.jpg')"
+              >
+                <h3 class="h4 card-title">Sports Collections</h3>
+
+                <a href="#" class="btn btn-secondary">
+                  <span>Explore All</span>
+
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PRODUCT -->
+      <section class="spacing product">
+        <div class="container">
+          <h2 class="h2 section-title">Bestsellers Products</h2>
+          <ul class="filter-list">
+            <li>
+              <button class="filter-btn active">All</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">Nike</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">Adidas</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">Puma</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">Bata</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">Apex</button>
+            </li>
+          </ul>
+
+          <!-- Render Here -->
+          <ul class="product-list" data-product></ul>
+        </div>
+      </section>
+
+      <!--Call to Action  -->
+      <section class="spacing cta">
+        <div class="container">
+          <ul class="cta-list">
+            <li>
+              <div class="cta-card cta-card--1">
+                <p class="card-subtitle">Adidas Shoes</p>
+                <h3 class="h2 card-title">The Summer Sale Off 50%</h3>
+                <a href="#" class="btn btn-link">
+                  <span>Shop Now</span>
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="cta-card cta-card--2">
+                <p class="card-subtitle">Nike Shoes</p>
+                <h3 class="h2 card-title">Makes Yourself Keep Sporty</h3>
+                <a href="#" class="btn btn-link">
+                  <span>Shop Now</span>
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SPECIAL -->
+      <section class="spacing special">
+        <div class="container">
+          <div class="special-banner">
+            <h2 class="h3 banner-title">New Trend Edition</h2>
+
+            <a href="#" class="btn btn-link">
+              <span>Explore All</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+
+          <div class="special-product">
+            <h2 class="h2 section-title">
+              <span class="text">Nike Special</span>
+              <span class="line"></span>
+            </h2>
+
+            <!-- Render here -->
+            <ul class="scrollbar" data-special-product></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEVICE -->
+      <section class="spacing service">
+        <div class="container">
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-card">
+                <div class="card-icon">
+                  <img
+                    src="./images/service-1.png"
+                    width="53"
+                    height="28"
+                    loading="lazy"
+                    alt="Service icon"
+                  />
+                </div>
+
+                <div>
+                  <h3 class="h4 card-title">Free Shiping</h3>
+
+                  <p class="card-text">All orders over <span>$150</span></p>
+                </div>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-card">
+                <div class="card-icon">
+                  <img
+                    src="./images/service-2.png"
+                    width="43"
+                    height="35"
+                    loading="lazy"
+                    alt="Service icon"
+                  />
+                </div>
+
+                <div>
+                  <h3 class="h4 card-title">Quick Payment</h3>
+
+                  <p class="card-text">100% secure payment</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-card">
+                <div class="card-icon">
+                  <img
+                    src="./images/service-3.png"
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    alt="Service icon"
+                  />
+                </div>
+
+                <div>
+                  <h3 class="h4 card-title">Free Returns</h3>
+
+                  <p class="card-text">Money back in 30 days</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-card">
+                <div class="card-icon">
+                  <img
+                    src="./images/service-4.png"
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    alt="Service icon"
+                  />
+                </div>
+
+                <div>
+                  <h3 class="h4 card-title">24/7 Support</h3>
+
+                  <p class="card-text">Get Quick Support</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- POST -->
+      <section class="spacing post">
+        <ul class="post-list scrollbar">
+          <li class="post-item">
+            <img
+              src="./images/insta-1.jpg"
+              width="100"
+              height="100"
+              loading="lazy"
+              alt="Instagram post"
+              class="post-banner card-img"
+            />
+
+            <a href="#" class="post-link">
+              <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
 
-          <li>
-            <button class="action-btn">
-              <ion-icon name="heart-outline"></ion-icon>
-              <span class="action-text">Wishlist</span>
-              <data class="action-count" value="5">5</data>
-            </button>
+          <li class="post-item">
+            <img
+              src="./images/insta-2.jpg"
+              width="100"
+              height="100"
+              loading="lazy"
+              alt="Instagram post"
+              class="post-banner card-img"
+            />
+
+            <a href="#" class="post-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
           </li>
 
-          <li>
-            <button class="action-btn">
-              <ion-icon name="bag-outline"></ion-icon>
-              <span class="action-text">
-                Basket: <strong>$318.00</strong>
-              </span>
-              <data class="action-count" value="4"> 4 </data>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+          <li class="post-item">
+            <img
+              src="./images/insta-3.jpg"
+              width="100"
+              height="100"
+              loading="lazy"
+              alt="Instagram post"
+              class="post-banner card-img"
+            />
 
-  <main>
-    <!-- BANNER -->
-    <section class="spacing banner">
-      <div class="container">
-        <h2 class="h1 banner-title">
-          New Summer <strong>Shoes Collection</strong>
-        </h2>
-
-        <p class="banner-text">
-          Competently expedite alternative benefits whereas leading-edge
-          catalysts for change. Globally leverage existing an expanded array
-          of leadership.
-        </p>
-
-        <button class="btn btn-primary">
-          <span>Shop now</span>
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </button>
-      </div>
-    </section>
-
-    <!-- COLLECTIONS -->
-    <section class="spacing collection">
-      <div class="container">
-        <ul class="collection-list scrollbar">
-          <li>
-            <div class="collection-card" style="background-image: url('./images/collection-1.jpg')">
-              <h3 class="h4 card-title">Men Collections</h3>
-
-              <a href="#" class="btn btn-secondary">
-                <span>Explore All </span>
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
-            </div>
+            <a href="#" class="post-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
           </li>
 
-          <li>
-            <div class="collection-card" style="background-image: url('./images/collection-2.jpg')">
-              <h3 class="h4 card-title">Women Collections</h3>
+          <li class="post-item">
+            <img
+              src="./images/insta-4.jpg"
+              width="100"
+              height="100"
+              loading="lazy"
+              alt="Instagram post"
+              class="post-banner card-img"
+            />
 
-              <a href="#" class="btn btn-secondary">
-                <span>Explore All</span>
-
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
-            </div>
+            <a href="#" class="post-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
           </li>
 
-          <li>
-            <div class="collection-card" style="background-image: url('./images/collection-3.jpg')">
-              <h3 class="h4 card-title">Sports Collections</h3>
+          <li class="post-item">
+            <img
+              src="./images/insta-5.jpg"
+              width="100"
+              height="100"
+              loading="lazy"
+              alt="Instagram post"
+              class="post-banner card-img"
+            />
 
-              <a href="#" class="btn btn-secondary">
-                <span>Explore All</span>
-
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- PRODUCT -->
-    <section class="spacing product">
-      <div class="container">
-        <h2 class="h2 section-title">Bestsellers Products</h2>
-        <ul class="filter-list">
-          <li>
-            <button class="filter-btn active">All</button>
+            <a href="#" class="post-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
           </li>
 
-          <li>
-            <button class="filter-btn">Nike</button>
+          <li class="post-item">
+            <img
+              src="./images/insta-6.jpg"
+              width="100"
+              height="100"
+              loading="lazy"
+              alt="Instagram post"
+              class="post-banner card-img"
+            />
+
+            <a href="#" class="post-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
           </li>
 
-          <li>
-            <button class="filter-btn">Adidas</button>
+          <li class="post-item">
+            <img
+              src="./images/insta-7.jpg"
+              width="100"
+              height="100"
+              loading="lazy"
+              alt="Instagram post"
+              class="post-banner card-img"
+            />
+
+            <a href="#" class="post-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
           </li>
 
-          <li>
-            <button class="filter-btn">Puma</button>
-          </li>
+          <li class="post-item">
+            <img
+              src="./images/insta-8.jpg"
+              width="100"
+              height="100"
+              loading="lazy"
+              alt="Instagram post"
+              class="post-banner card-img"
+            />
 
-          <li>
-            <button class="filter-btn">Bata</button>
-          </li>
-
-          <li>
-            <button class="filter-btn">Apex</button>
+            <a href="#" class="post-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
           </li>
         </ul>
-
-        <!-- Render Here -->
-        <ul class="product-list" data-product></ul>
-      </div>
-    </section>
-
-    <!--Call to Action  -->
-    <section class="spacing cta">
-      <div class="container">
-        <ul class="cta-list">
-          <li>
-            <div class="cta-card cta-card--1">
-              <p class="card-subtitle">Adidas Shoes</p>
-              <h3 class="h2 card-title">The Summer Sale Off 50%</h3>
-              <a href="#" class="btn btn-link">
-                <span>Shop Now</span>
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
-            </div>
-          </li>
-
-          <li>
-            <div class="cta-card cta-card--2">
-              <p class="card-subtitle">Nike Shoes</p>
-              <h3 class="h2 card-title">Makes Yourself Keep Sporty</h3>
-              <a href="#" class="btn btn-link">
-                <span>Shop Now</span>
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- SPECIAL -->
-    <section class="spacing special">
-      <div class="container">
-        <div class="special-banner">
-          <h2 class="h3 banner-title">New Trend Edition</h2>
-
-          <a href="#" class="btn btn-link">
-            <span>Explore All</span>
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </a>
-        </div>
-
-        <div class="special-product">
-          <h2 class="h2 section-title">
-            <span class="text">Nike Special</span>
-            <span class="line"></span>
-          </h2>
-
-          <!-- Render here -->
-          <ul class="scrollbar" data-special-product></ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEVICE -->
-    <section class="spacing service">
-      <div class="container">
-        <ul class="service-list">
-          <li class="service-item">
-            <div class="service-card">
-              <div class="card-icon">
-                <img src="./images/service-1.png" width="53" height="28" loading="lazy" alt="Service icon" />
-              </div>
-
-              <div>
-                <h3 class="h4 card-title">Free Shiping</h3>
-
-                <p class="card-text">All orders over <span>$150</span></p>
-              </div>
-            </div>
-          </li>
-
-          <li class="service-item">
-            <div class="service-card">
-              <div class="card-icon">
-                <img src="./images/service-2.png" width="43" height="35" loading="lazy" alt="Service icon" />
-              </div>
-
-              <div>
-                <h3 class="h4 card-title">Quick Payment</h3>
-
-                <p class="card-text">100% secure payment</p>
-              </div>
-            </div>
-          </li>
-
-          <li class="service-item">
-            <div class="service-card">
-              <div class="card-icon">
-                <img src="./images/service-3.png" width="40" height="40" loading="lazy" alt="Service icon" />
-              </div>
-
-              <div>
-                <h3 class="h4 card-title">Free Returns</h3>
-
-                <p class="card-text">Money back in 30 days</p>
-              </div>
-            </div>
-          </li>
-
-          <li class="service-item">
-            <div class="service-card">
-              <div class="card-icon">
-                <img src="./images/service-4.png" width="40" height="40" loading="lazy" alt="Service icon" />
-              </div>
-
-              <div>
-                <h3 class="h4 card-title">24/7 Support</h3>
-
-                <p class="card-text">Get Quick Support</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- POST -->
-    <section class="spacing post">
-      <ul class="post-list scrollbar">
-        <li class="post-item">
-          <img src="./images/insta-1.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
-            class="post-banner card-img" />
-
-          <a href="#" class="post-link">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-
-        <li class="post-item">
-          <img src="./images/insta-2.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
-            class="post-banner card-img" />
-
-          <a href="#" class="post-link">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-
-        <li class="post-item">
-          <img src="./images/insta-3.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
-            class="post-banner card-img" />
-
-          <a href="#" class="post-link">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-
-        <li class="post-item">
-          <img src="./images/insta-4.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
-            class="post-banner card-img" />
-
-          <a href="#" class="post-link">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-
-        <li class="post-item">
-          <img src="./images/insta-5.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
-            class="post-banner card-img" />
-
-          <a href="#" class="post-link">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-
-        <li class="post-item">
-          <img src="./images/insta-6.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
-            class="post-banner card-img" />
-
-          <a href="#" class="post-link">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-
-        <li class="post-item">
-          <img src="./images/insta-7.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
-            class="post-banner card-img" />
-
-          <a href="#" class="post-link">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-
-        <li class="post-item">
-          <img src="./images/insta-8.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
-            class="post-banner card-img" />
-
-          <a href="#" class="post-link">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-      </ul>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <!-- footer top -->
-    <div class="footer-top spacing">
-      <div class="container">
-        <div class="footer-brand">
-          <a href="#" class="logo">
-            <img src="./images/logo.svg" width="160" height="50" alt="Footcap logo" />
-          </a>
-
-          <ul class="social-list">
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-link-box">
-          <ul class="footer-list">
-            <li>
-              <p class="footer-list-title">Contact Us</p>
-            </li>
-
-            <li>
-              <address class="footer-link">
-                <ion-icon name="location"></ion-icon>
-
-                <span class="footer-link-text">
-                  2751 S Parker Rd, Aurora, CO 80014, United States
-                </span>
-              </address>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="call"></ion-icon>
-
-                <span class="footer-link-text">+557343673257</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="mail"></ion-icon>
-
-                <span class="footer-link-text">footcap@help.com</span>
-              </a>
-            </li>
-          </ul>
-
-          <ul class="footer-list">
-            <li>
-              <p class="footer-list-title">My Account</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-
-                <span class="footer-link-text">My Account</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-
-                <span class="footer-link-text">View Cart</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-
-                <span class="footer-link-text">Wishlist</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-
-                <span class="footer-link-text">Compare</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-
-                <span class="footer-link-text">New Products</span>
-              </a>
-            </li>
-          </ul>
-
-          <div class="footer-list">
-            <p class="footer-list-title">Opening Time</p>
-
-            <table class="footer-table">
-              <tbody>
-                <tr class="table-row">
-                  <th class="table-head" scope="row">Mon - Tue:</th>
-
-                  <td class="table-data">8AM - 10PM</td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head" scope="row">Wed:</th>
-
-                  <td class="table-data">8AM - 7PM</td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head" scope="row">Fri:</th>
-
-                  <td class="table-data">7AM - 12PM</td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head" scope="row">Sat:</th>
-
-                  <td class="table-data">9AM - 8PM</td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head" scope="row">Sun:</th>
-
-                  <td class="table-data">Closed</td>
-                </tr>
-              </tbody>
-            </table>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <!-- footer top -->
+      <div class="footer-top spacing">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <img
+                src="./images/logo.svg"
+                width="160"
+                height="50"
+                alt="Footcap logo"
+              />
+            </a>
+
+            <ul class="social-list">
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <div class="footer-list">
-            <p class="footer-list-title">Newsletter</p>
+          <div class="footer-link-box">
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Contact Us</p>
+              </li>
 
-            <p class="newsletter-text">
-              Authoritatively morph 24/7 potentialities with error-free
-              partnerships.
-            </p>
+              <li>
+                <address class="footer-link">
+                  <ion-icon name="location"></ion-icon>
 
-            <form class="newsletter-form">
-              <input type="email" name="email" required placeholder="Email Address" class="newsletter-input" />
+                  <span class="footer-link-text">
+                    2751 S Parker Rd, Aurora, CO 80014, United States
+                  </span>
+                </address>
+              </li>
 
-              <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="call"></ion-icon>
+
+                  <span class="footer-link-text">+557343673257</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="mail"></ion-icon>
+
+                  <span class="footer-link-text">footcap@help.com</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">My Account</p>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                  <span class="footer-link-text">My Account</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                  <span class="footer-link-text">View Cart</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                  <span class="footer-link-text">Wishlist</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                  <span class="footer-link-text">Compare</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                  <span class="footer-link-text">New Products</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="footer-list">
+              <p class="footer-list-title">Opening Time</p>
+
+              <table class="footer-table">
+                <tbody>
+                  <tr class="table-row">
+                    <th class="table-head" scope="row">Mon - Tue:</th>
+
+                    <td class="table-data">8AM - 10PM</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head" scope="row">Wed:</th>
+
+                    <td class="table-data">8AM - 7PM</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head" scope="row">Fri:</th>
+
+                    <td class="table-data">7AM - 12PM</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head" scope="row">Sat:</th>
+
+                    <td class="table-data">9AM - 8PM</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head" scope="row">Sun:</th>
+
+                    <td class="table-data">Closed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="footer-list">
+              <p class="footer-list-title">Newsletter</p>
+
+              <p class="newsletter-text">
+                Authoritatively morph 24/7 potentialities with error-free
+                partnerships.
+              </p>
+
+              <form class="newsletter-form">
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Email Address"
+                  class="newsletter-input"
+                />
+
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- footer bottom -->
-    <div class="footer-bottom">
-      <div class="container">
-        <p class="copyright">
-          © 2022 <a href="#" class="copyright-link">Percess</a>. All Rights
-          Reserved
-        </p>
+      <!-- footer bottom -->
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            © 2022 <a href="#" class="copyright-link">Percess</a>. All Rights
+            Reserved
+          </p>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <a href="#go-top" class="go-top-btn" data-go-top>
-    <ion-icon name="arrow-up-outline"></ion-icon>
-  </a>
+    <a href="#go-top" class="go-top-btn" data-go-top>
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </a>
 
-  <!-- axios -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
-    integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
+      integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- ion-icon -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- ion-icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
-  <!-- my js -->
-  <script src="./js/home.js"></script>
-</body>
-
+    <!-- my js -->
+    <script src="./js/home.js"></script>
+  </body>
 </html>
