@@ -9,7 +9,7 @@
 
 @mixin styleButton($color-before, $color-after, $bg-before, $bg-after) {
   padding: 10px 35px;
-  border: 1px solid $orange;
+  border: 1px solid $primary;
   border-radius: 10px;
   color: $color-before;
   background-color: $bg-before;
