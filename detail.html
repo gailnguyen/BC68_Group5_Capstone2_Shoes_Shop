@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Detail</title>
+    <title>Product Details</title>
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -27,60 +28,287 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body id="detail_page">
     <!-- header -->
-    <header></header>
-    <nav class="breadcrumb">
-        <a class="breadcrumb-item" href="#">Main</a>
-        <a class="breadcrumb-item" href="#">Sub</a>
-        <span class="breadcrumb-item active" aria-current="page">Active</span>
-    </nav>
+    <header id="header" data-header>
+        <div class="container">
+            <div class="overlay" data-overlay></div>
+            <a href="#" class="logo">
+                <img src="./images/logo.svg" alt="logo" width="160" height="50" />
+            </a>
+
+            <!-- Icon click to navbar mobile -->
+            <button class="nav-open-btn" data-nav-open-btn>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <!-- Navbar -->
+            <nav class="nav" data-navbar>
+                <button class="nav-close-btn" data-nav-close-btn>
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+
+                <a href="#" class="logo">
+                    <img src="./images/logo.svg" width="190" height="50" alt="Logo" />
+                </a>
+
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./detail.html" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="nav-actions-list">
+                    <li>
+                        <button class="action-btn">
+                            <ion-icon name="search-outline"></ion-icon>
+                            <span class="action-text"></span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <a href="./register.html" class="action-btn">
+                            <ion-icon name="person-outline"></ion-icon>
+                            <span class="action-text">Login / Register</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <button class="action-btn">
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <span class="action-text">Wishlist</span>
+                            <data class="action-count" value="5">5</data>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button class="action-btn">
+                            <ion-icon name="bag-outline"></ion-icon>
+                            <span class="action-text">
+                                Basket: <strong>$318.00</strong>
+                            </span>
+                            <data class="action-count" value="4"> 4 </data>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
 
     <!-- main -->
     <section>
-
-
-
         <div class="container">
-            <!-- input id -->
-
-            <form action="" id="search">
-                <div class="mb-3">
-                    <label for="" class="form-label">Name</label>
-                    <input type="text" class="form-control" name="" id="id" aria-describedby="helpId"
-                        placeholder="submit ID" />
-                    <button type="submit" class="btn btn-dark text-white mt-3">See details</button>
-                </div>
-
-            </form>
-
             <!-- single product -->
             <div class="row single-product-area">
-                <div class="col-4">
-                    <!-- product img -->
-                    <img src="" alt="">
-                </div>
-                <div class="col-8">
-                    <!-- product detail -->
-                    <div class="product-card">
-                        <!-- info -->
-                    </div>
-                </div>
             </div>
 
-            <!-- categories -->
+            <!-- full description -->
+            <div class="row product-description">
+            </div>
+
+            <!-- same category -->
             <div class="row same-categories">
-                <div class="d-grid">
-
-                </div>
             </div>
-        </div>
     </section>
 
     <!-- footer -->
-    <footer></footer>
+    <footer class="footer">
+        <!-- footer top -->
+        <div class="footer-top spacing">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="./images/logo.svg" width="160" height="50" alt="Footcap logo" />
+                    </a>
 
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
 
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-pinterest"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-link-box">
+                    <ul class="footer-list">
+                        <li>
+                            <p class="footer-list-title">Contact Us</p>
+                        </li>
+
+                        <li>
+                            <address class="footer-link">
+                                <ion-icon name="location"></ion-icon>
+
+                                <span class="footer-link-text">
+                                    2751 S Parker Rd, Aurora, CO 80014, United States
+                                </span>
+                            </address>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">
+                                <ion-icon name="call"></ion-icon>
+
+                                <span class="footer-link-text">+557343673257</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">
+                                <ion-icon name="mail"></ion-icon>
+
+                                <span class="footer-link-text">footcap@help.com</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer-list">
+                        <li>
+                            <p class="footer-list-title">My Account</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                                <span class="footer-link-text">My Account</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                                <span class="footer-link-text">View Cart</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                                <span class="footer-link-text">Wishlist</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                                <span class="footer-link-text">Compare</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                                <span class="footer-link-text">New Products</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="footer-list">
+                        <p class="footer-list-title">Opening Time</p>
+
+                        <table class="footer-table">
+                            <tbody>
+                                <tr class="table-row">
+                                    <th class="table-head" scope="row">Mon - Tue:</th>
+
+                                    <td class="table-data">8AM - 10PM</td>
+                                </tr>
+
+                                <tr class="table-row">
+                                    <th class="table-head" scope="row">Wed:</th>
+
+                                    <td class="table-data">8AM - 7PM</td>
+                                </tr>
+
+                                <tr class="table-row">
+                                    <th class="table-head" scope="row">Fri:</th>
+
+                                    <td class="table-data">7AM - 12PM</td>
+                                </tr>
+
+                                <tr class="table-row">
+                                    <th class="table-head" scope="row">Sat:</th>
+
+                                    <td class="table-data">9AM - 8PM</td>
+                                </tr>
+
+                                <tr class="table-row">
+                                    <th class="table-head" scope="row">Sun:</th>
+
+                                    <td class="table-data">Closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="footer-list">
+                        <p class="footer-list-title">Newsletter</p>
+
+                        <p class="newsletter-text">
+                            Authoritatively morph 24/7 potentialities with error-free
+                            partnerships.
+                        </p>
+
+                        <form class="newsletter-form">
+                            <input type="email" name="email" required placeholder="Email Address"
+                                class="newsletter-input" />
+
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    © 2022 <a href="#" class="copyright-link">Percess</a>. All Rights
+                    Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -94,6 +322,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
         integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- ion-icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <!-- my js -->
     <script src="./js/detail.js"></script>
 </body>
