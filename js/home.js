@@ -74,6 +74,7 @@ const apps = (() => {
                   width="312"
                   height="350"
                   loading="lazy"
+                  id=${shoe.id} onclick="handleItemClick(event)"
                 />
         
                 <div class="card-badge">${text}</div>
@@ -168,3 +169,10 @@ const apps = (() => {
 })();
 
 apps.init();
+
+// lấy id sản phẩm từ event onclick
+function handleItemClick(event) {
+  const itemId = event.target.id;
+  console.log(itemId);
+  window.location.href = `detail.html?id=${itemId}`;
+}
