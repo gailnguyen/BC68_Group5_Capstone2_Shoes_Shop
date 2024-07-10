@@ -10,6 +10,9 @@ body {
 
   h2 {
     text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: $fz-3;
   }
 
   .form-group {
@@ -52,7 +55,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-align: center;
+    text-align: right;
     width: 100%;
 
     &:hover {
