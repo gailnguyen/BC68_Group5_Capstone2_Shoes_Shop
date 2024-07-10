@@ -1,4 +1,5 @@
-// XỬ LÍ THÊM CLASS ACTIVE CHO HEADER VÀ GO TO TOP KHI SCROLL
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 // XỬ LÍ THÊM CLASS ACTIVE CHO HEADER VÀ GO TO TOP KHI SCROLL
 const $header = $("[data-header]");
 const $goTopBtn = $("[data-go-top]");
@@ -12,6 +13,25 @@ window.addEventListener("scroll", () => {
     $goTopBtn.removeClass("active");
   }
 });
+
+// XỬ LÍ EVENT CLICK NAV TRÊN MOBILE
+const overlay = $("[data-overlay]");
+const openBtn = $("[data-nav-open-btn]");
+const closeBtn = $("[data-nav-close-btn]");
+const navbar = $("[data-navbar]");
+
+function addEvent(eventype, elements, func) {
+  for (let element of elements) {
+    element.addEventListener(eventype, func);
+  }
+}
+
+function toggleClass() {
+  overlay.classList.toggle("active");
+  navbar.classList.toggle("active");
+}
+
+addEvent("click", [openBtn, overlay, closeBtn], toggleClass);
 
 document.addEventListener("DOMContentLoaded", function () {
   document

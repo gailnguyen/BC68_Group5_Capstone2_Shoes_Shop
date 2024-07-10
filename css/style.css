@@ -924,7 +924,7 @@ body {
   margin: 15px 0;
   font-size: 14px;
 }
-.container button {
+.container .btn-submit {
   padding: 10px;
   background-color: hsl(5, 100%, 73%);
   color: white;
@@ -934,7 +934,7 @@ body {
   text-align: center;
   width: 100%;
 }
-.container button:hover {
+.container .btn-submit:hover {
   background-color: hsl(5, 100%, 69%);
 }
 
