@@ -50,7 +50,7 @@ function renderDetailApi(object) {
     <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
         <!-- product detail -->
         <div class="single-product-card p-5">
-            <h2>${name}</h2>
+            <h2 class="text-start">${name}</h2>
             <p>${categories[0].id}</p>
             <p>${shortDescription}</p>
             <h3>$${price}</h3>
@@ -121,7 +121,7 @@ function renderDetailApi(object) {
   `;
 
   // category
-  let sameCategory = "<h2>Same Category:</h2>";
+  let sameCategory = "<h2 id='same-category-title'>Same Category:</h2>";
   for (let z = 0; z < relatedProducts.length; z++) {
     console.log(relatedProducts[z]);
     let { image, name, description, price } = relatedProducts[z];
