@@ -43,11 +43,11 @@ function renderDetailApi(object) {
     sizeOption += `<span>${size[i]}</span>`;
   }
   content += `
-    <div class="col-5 single-product-img">
+    <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 single-product-img">
         <!-- product img -->
         <img src="${image}" class="img-fluid" alt="">
     </div>
-    <div class="col-7">
+    <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
         <!-- product detail -->
         <div class="single-product-card p-5">
             <h2>${name}</h2>
@@ -57,8 +57,8 @@ function renderDetailApi(object) {
             <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>
             <div class="product_size"><p>Size:</p>${sizeOption}</div>
             <p>Quantity: ${quantity}</p>
-            <button id="btnAddToCart">ADD TO CART</button>
-            <button id="btnAddToFavorites">ADD TO FAVORITES</button>
+            <button class="d-inline mb-4" id="btnAddToCart">ADD TO CART</button>
+            <button class="d-inline" id="btnAddToFavorites">ADD TO FAVORITES</button>
         </div>
     </div>
     `;
@@ -67,7 +67,7 @@ function renderDetailApi(object) {
 
   // full description
   document.querySelector(".product-description").innerHTML = `
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <ul class="nav nav-tabs flex-sm-column flex-md-column flex-lg-row flex-xl-row" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
       type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">description</button>
@@ -92,23 +92,25 @@ function renderDetailApi(object) {
                     <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
                         placeholder="" />
                 </div>
-                <div class="row">
-                    <div class="mb-3">
+                <div class="mb-3">
                         <label for="" class="form-label"><span>*</span> Your review</label>
                         <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
                             placeholder="" />
                     </div>
-                </div>
                   <div class="row">
                       <div class="col">
                           <label class="control-label"><span>*</span> Rating</label>
-                          <span> <br> Bad </span>
-                          <input type="radio" value="1" name="rating">
-                          <input type="radio" value="2" name="rating">
-                          <input type="radio" value="3" name="rating">
-                          <input type="radio" value="4" name="rating">
-                          <input type="radio" value="5" name="rating">
-                          <span>Good</span>
+                          <div class="d-flex justify-content-around">
+                          Bad
+                          <div class="d-flex justify-content-around">
+                          <input type="radio" class="mx-3" value="1" name="rating">
+                          <input type="radio" class="mx-3" value="2" name="rating">
+                          <input type="radio" class="mx-3" value="3" name="rating">
+                          <input type="radio" class="mx-3" value="4" name="rating">
+                          <input type="radio" class="mx-3" value="5" name="rating">
+                          </div>
+                          Good
+                          </div>
                       </div>
                   </div>
               </div>
@@ -125,14 +127,12 @@ function renderDetailApi(object) {
     let { image, name, description, price } = relatedProducts[z];
     // console.log(alias);
     sameCategory += `
-    <div class="col-4">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
       <div class="related-product-card">
         <div class="product-layout">
-          
           <div class="related-product-img">
             <img src="${image}" class="img-fluid" alt="">
           </div>
-          
           <div class="related-product-info">
             <h3>${name}</h3>
             <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
@@ -146,3 +146,40 @@ function renderDetailApi(object) {
   }
   document.querySelector(".same-categories").innerHTML = sameCategory;
 }
+
+("use strict");
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+// XỬ LÍ EVENT CLICK NAV TRÊN MOBILE
+const overlay = $("[data-overlay]");
+const openBtn = $("[data-nav-open-btn]");
+const closeBtn = $("[data-nav-close-btn]");
+const navbar = $("[data-navbar]");
+
+function addEvent(eventype, elements, func) {
+  for (let element of elements) {
+    element.addEventListener(eventype, func);
+  }
+}
+
+function toggleClass() {
+  overlay.classList.toggle("active");
+  navbar.classList.toggle("active");
+}
+
+addEvent("click", [openBtn, overlay, closeBtn], toggleClass);
+
+// XỬ LÍ THÊM CLASS ACTIVE CHO HEADER VÀ GO TO TOP KHI SCROLL
+const header = $("[data-header]");
+const goTopBtn = $("[data-go-top]");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 80) {
+    header.classList.add("active");
+    goTopBtn.classList.add("active");
+  } else {
+    header.classList.remove("active");
+    goTopBtn.classList.remove("active");
+  }
+});
