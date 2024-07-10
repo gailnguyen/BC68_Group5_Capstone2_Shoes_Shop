@@ -341,9 +341,9 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
   transition: 0.5s ease;
 }
 
@@ -866,11 +866,7 @@ body {
   margin: 10px 0;
   line-height: 1.8;
 }
-.same-categories
-  .related-product-card
-  .product-layout
-  .related-product-info
-  h3 {
+.same-categories .related-product-card .product-layout .related-product-info h3 {
   color: hsl(217, 28%, 9%);
   font-size: 2rem;
   font-weight: 600;
@@ -878,23 +874,68 @@ body {
   margin: 10px 0;
   line-height: 1.8;
 }
-.same-categories
-  .related-product-card
-  .product-layout
-  .related-product-info
-  h3:hover {
+.same-categories .related-product-card .product-layout .related-product-info h3:hover {
   color: hsl(5, 100%, 69%);
 }
-.same-categories
-  .related-product-card
-  .product-layout
-  .related-product-info
-  span {
+.same-categories .related-product-card .product-layout .related-product-info span {
   color: hsl(5, 100%, 73%);
 }
 
 #header .nav-list .nav-item .nav-link {
   padding: 10px 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.container h2 {
+  text-align: center;
+}
+.container .form-group {
+  margin-bottom: 15px;
+}
+.container .form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.container .form-group .required {
+  color: red;
+}
+.container .form-group input {
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.container .form-group .form-check {
+  margin-bottom: 10px;
+}
+.container .form-group .form-check .form-check-input {
+  margin-right: 5px;
+}
+.container p {
+  margin: 15px 0;
+  font-size: 14px;
+}
+.container button {
+  padding: 10px;
+  background-color: hsl(5, 100%, 73%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+.container button:hover {
+  background-color: hsl(5, 100%, 69%);
 }
 
 /*
@@ -1085,7 +1126,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 30px;
-    column-gap: 30px;
+         column-gap: 30px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1267,4 +1308,4 @@ body {
     grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
     gap: 50px;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

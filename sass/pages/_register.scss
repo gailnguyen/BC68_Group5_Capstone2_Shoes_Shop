@@ -6,7 +6,6 @@ body {
   max-width: 400px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 10px;
 
   h2 {
@@ -48,7 +47,7 @@ body {
 
   button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: $primary-opacity;
     color: white;
     border: none;
     border-radius: 5px;
@@ -57,7 +56,7 @@ body {
     width: 100%;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: $primary;
     }
   }
 }
